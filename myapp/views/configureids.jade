@@ -1,0 +1,20 @@
+extends layout
+
+block content
+  h1= title
+  form(action='configureids' method='post')
+    label URL of the IDS:
+    input(type="text", id="url", name="url", class="form-control")
+    label Client ID:
+    input(type="text", id="client_id", name="client_id", class="form-control")
+    label Tenant ID:
+    input(type="text", id="tenant_id", name="tenant_id", class="form-control")
+    label Redirect URL:
+    input(type="text", id="redirect_url", name="redirect_url", class="form-control")
+    label Post logout redirect URL:
+    input(type="text", id="post_logout_redirect_url", name="post_logout_redirect_url", class="form-control")
+    label Response type:
+    input(type="text", id="response_type", name="response_type", value="token id_token" class="form-control")
+    label Scope:
+    input(type="text", id="scope", name="scope", value="openid profile", class="form-control")
+    input(type="submit", value="Save")
